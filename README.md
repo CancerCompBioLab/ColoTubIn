@@ -8,7 +8,6 @@
 
 Liñares-Blanco, Jose1+\*; Lemler, Lea2+; Chicote, Irene3; Ros, Javier4,5; Alcántara, Anna M3; Martínez-Quintanilla, Jordi3; Elez, Elena4,5; G Palmer, Héctor3; Fernandez-Lozano, Carlos1,\*; Seoane, Jose A2,\* 
 
-Jose Liñares-Blanco1+*, Lea Lemler2+, Irene Chicote3, Javier Ros4,5, Anna M. Alcántara3, Jordi Martínez-Quintanilla3, Elena Elez4,5, Héctor G. Palmer3, Carlos Fernandez-Lozano1*, and Jose A. Seoane2*
 
 1 Machine Learning in Life Sciences Lab. Dept. of Computer Science and Information Technologies, Universidade da Coruña (CITIC), A Coruña, Spain 
 
