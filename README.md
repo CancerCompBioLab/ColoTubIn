@@ -1,7 +1,5 @@
 # Prediction of Tubulin Inhibitor Sensitivity in Colon Cancer
 
-Liñares-Blanco, Jose1+\*; Lemler, Lea2+; Chicote, Irene3; Ros, Javier4,5; Alcántara, Anna M3; Martínez-Quintanilla, Jordi3; Elez, Elena4,5; G Palmer, Héctor3; Fernandez-Lozano, Carlos1,\*; Seoane, Jose A2,\* 
-
 Linares-Blanco, Jose<sup>1</sup>+*; Lemler, Lea<sup>2</sup>+; Chicote, Irene<sup>3</sup>; Ros, Javier<sup>4,5</sup>; Alcántara, Anna M<sup>3</sup>; Martínez-Quintanilla, Jordi<sup>3</sup>; Elez, Elena<sup>4,5</sup>; G Palmer, Héctor<sup>3</sup>; Fernandez-Lozano, Carlos<sup>1</sup>,*; Seoane, Jose A<sup>2</sup>,*
 
 1 Machine Learning in Life Sciences Lab. Dept. of Computer Science and Information Technologies, Universidade da Coruña (CITIC), A Coruña, Spain 
