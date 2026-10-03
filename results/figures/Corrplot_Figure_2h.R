@@ -1,10 +1,11 @@
+
 library(here)
 here()
 source(here("environment", "requirements.R"))
 
 # Inputpaths
-signatures_inputpath <- here("data", "processed_data", "literatureSignatures_new.rds")
-counts_inputpath <- here("data", "processed_data", "counts_norm_coad_patients.rds")
+signatures_inputpath <- here("data", "extdata", "literatureSignatures_new.rds")
+counts_inputpath <- here("data", "data", "pp", "counts_norm_coad_patients.rds")
 
 
 # Load data
@@ -55,7 +56,7 @@ gsva <- as.data.frame(t(gsva))
 names(gsva)[grep("ours", names(gsva))] <- "ColoTubIn"
 
 # order by SigCheck significance
-s <- readRDS(here("data", "processed_data", "sigcheck_literature", "scKnownLiterature_ours.rds"))
+s <- readRDS(here("data", "data","sigcheck","sigcheck_literature","scKnownLiterature_ours.rds"))
 
 sort <- names(sort(c(ours = s$survivalPval, s$survivalPvalsKnown))) # This sorting doesnt work like this 
 

@@ -5,7 +5,7 @@ here()
 source(here("environment", "requirements.R"))
 
 # Inputpath
-inputpath <- here("data", "processed_data", "cox", "cindex_tcga.rds")
+inputpath <- here("data", "data", "cox","tcga", "cindex_tcga.rds")
 
 # Load data
 data <- readRDS(inputpath)

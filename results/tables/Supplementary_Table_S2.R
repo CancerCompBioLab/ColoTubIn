@@ -4,7 +4,7 @@ source(here("environment", "requirements.R"))
 
 
 # --- CONFIGURATION ---
-external_cohorts_inputpath <- here("data", "processed_data", "geo")
+external_cohorts_inputpath <- here("data", "data","pp", "geo")
 output_dir <- here("results", "tables")
 
 # if (!dir.exists(output_dir)) {
@@ -34,7 +34,7 @@ extract_clinical_data <- function(cohort) {
 }
 
 # --- LOAD TCGA CLINICAL COHORT ---
-tcga_path <- here("data", "processed_data", "metadata_coad_patients.rds")
+tcga_path <- here("data", "extdata", "tcga-coad","metadata_coad_patients.rds")
 tcga_data <- readRDS(tcga_path)
 
 names(tcga_data) <- make.names(names(tcga_data))

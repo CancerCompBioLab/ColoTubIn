@@ -6,9 +6,9 @@ here()
 source(here("environment", "requirements.R"))
 
 # Input paths
-cc_signatures_inputpath <- here("data", "processed_data", "cell_cycle.rds")
-tcga_inputpath <- here("data", "processed_data", "counts_norm_coad_patients.rds")
-coad_signatures_inputpath <- here("data", "processed_data", "literatureSignatures_new.rds")
+cc_signatures_inputpath <- here("data", "extdata", "signatures","cell_cycle.rds")
+tcga_inputpath <- here("data", "data","pp", "counts_norm_coad_patients.rds")
+coad_signatures_inputpath <- here("data", "extdata", "literatureSignatures_new.rds")
 
 # Load data
 train <- readRDS(tcga_inputpath)

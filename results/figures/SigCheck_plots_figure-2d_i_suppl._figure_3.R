@@ -6,7 +6,7 @@ source(here("environment", "requirements.R"))
 # Figure 2 main script
 
 # Define central data and output directories using here
-sigcheck_dir <- here("data", "processed_data", "sigcheck")
+sigcheck_dir <- here("data", "data", "sigcheck")
 output_dir <- here("results", "figures")
 
 # ColoTubIn

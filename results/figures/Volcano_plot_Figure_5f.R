@@ -6,7 +6,7 @@ source(here("environment", "requirements.R"))
 # Volcano plots figure 5f
 
 ## --- Configuration ---
-fgsea_inputpath <- here("data", "processed_data", "fgsea_by_signature_new.rds")
+fgsea_inputpath <- here("data", "data", "repurposing","fgsea_by_signature_new.rds")
 
 # Custom colors
 COLOR_SIGNIFICANT <- "#23B880"      # Green

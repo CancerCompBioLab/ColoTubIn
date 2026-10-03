@@ -4,11 +4,11 @@ source(here("environment", "requirements.R"))
 
 # 1. Paths & Setup
 # ----------------
-input_path_counts <- here("data", "processed_data", "geo")
-input_path_train  <- here("data", "processed_data", "signatures")
+input_path_counts <- here("data", "data", "pp","geo")
+input_path_train  <- here("data", "data","cox","tcga", "signatures")
 output_folder     <- here("results", "figures")
 
-target_signature <- "ours"  # Internal ID
+target_signature <- "ours_new"  # Internal ID
 cohorts <- c("GSE17536", "GSE17537", "GSE29621", "GSE39582","EMTAB12862", "ws4_spinal")
 cvrt    <- c("vital_status", "SurvTime", "gender_male", "age_at_diagnosis", "Stage_II", "Stage_III", "Stage_IV", "MSI.Status_MSI.L.MSS", "Molecular_Subtype_noCIN")
 
@@ -113,6 +113,7 @@ generate_signature_pca <- function(sig_name) {
 # -------
 final_plot <- generate_signature_pca(target_signature)
 
+final_plot
 
 # Save
 # ggsave(

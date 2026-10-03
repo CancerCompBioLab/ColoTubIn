@@ -3,11 +3,11 @@ here()
 source(here("environment", "requirements.R"))
 
 # Inputpaths
-metadata_inputpath <- here("data", "processed_data", "tcga-coad", "metadata_coad_patients.rds")
-counts_inputpath <- here("data", "processed_data", "tcga-coad", "counts_norm_coad_patients.rds")
+metadata_inputpath <- here("data", "extdata", "tcga-coad", "metadata_coad_patients.rds")
+counts_inputpath <- here("data", "extdata", "tcga-coad", "counts_norm_coad_patients.rds")
 
 # Outputpaths
-outputdir <- here("data", "data_partitions")
+outputdir <- here("data","data", "data_partitions")
 
 # Load data
 metadata <- readRDS(metadata_inputpath)

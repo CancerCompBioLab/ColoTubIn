@@ -12,7 +12,7 @@ here()
 source(here("environment", "requirements.R"))
 
 # --- CONFIGURATION ---
-external_cohorts_inputpath <- here("data", "processed_data", "geo")
+external_cohorts_inputpath <- here("data", "data","pp", "geo")
 output_dir <- here("results", "tables")
 
 cohorts <- c("GSE17536", "GSE17537", "GSE29621", "GSE39582", "EMTAB12862", "ws4_spinal", "TCGA_test")
@@ -24,7 +24,7 @@ cvrt <- c(
 
 # --- EXTRACTION FUNCTION FOR ALL COHORTS (INCLUDING TCGA_test) ---
 extract_clinical_data <- function(cohort) {
-  file_path <- here("data", "processed_data", "geo", paste0(cohort, "_clinical.rds"))
+  file_path <- here("data", "data","pp", "geo", paste0(cohort, "_clinical.rds"))
   clin_data <- readRDS(file_path)
   
   names(clin_data) <- make.names(names(clin_data))
@@ -122,7 +122,7 @@ print(tabletext)
 ################ Plot Forestplot ########################
 
 # --- 1. Load Data ---
-inputpath <- here("data", "processed_data", "uno_index_1825_days.rds")
+inputpath <- here("data", "data","cox","external", "uno_index_1825_days.rds")
 
 
 data <- readRDS(inputpath) %>%
@@ -303,7 +303,7 @@ dev.off()
 ########### Uno Index ##############
 
 # --- 1. Load Data ---
-inputpath <- here("data", "processed_data", "uno_index_MSI_stratified_final_2026.rds")
+inputpath <- here("data", "data","cox","external", "uno_index_MSI_stratified_final_2026.rds")
 full_data <- readRDS(inputpath) %>%
   mutate(Cohort = ifelse(tolower(Cohort) == "ws4_spinal", "SPINAL", Cohort))
 

@@ -1,14 +1,13 @@
 # Plot scatter plots between signature scores and specific cell cycles signatures
-# Figure 
+# Figure 4d-h
 
 library(here)
 here()
 source(here("environment", "requirements.R"))
 
-# Input paths
-cc_signatures_inputpath <- here("data", "processed_data", "cell_cycle.rds")
-tcga_inputpath <- here("data", "processed_data", "counts_norm_coad_patients.rds")
-coad_signatures_inputpath <- here("data", "processed_data","signatures_coad.rds")
+cc_signatures_inputpath <- here("data", "extdata", "signatures","cell_cycle.rds")
+tcga_inputpath <- here("data", "data","pp", "counts_norm_coad_patients.rds")
+coad_signatures_inputpath <- here("data", "extdata", "signatures_coad.rds")
 
 # Load data
 train <- readRDS(tcga_inputpath)
@@ -26,20 +25,23 @@ gsva <- gsva(
   kcdf = "Gaussian")
 gsva <- as.data.frame(t(gsva))
 
+# Rename 'ours' to 'ColoTubIn' in the dataframe columns
+colnames(gsva)[colnames(gsva) == "ours"] <- "ColoTubIn"
+
 # Plot
-s1 = ggscatter(gsva, x = 'ours', y = 'G1Phase', add = 'reg.line', conf.int = T,
+s1 = ggscatter(gsva, x = 'ColoTubIn', y = 'G1Phase', add = 'reg.line', conf.int = T,
                add.params = list(color = viridis(3)[1], fill = 'lightgray')) +
   stat_cor(method = 'pearson')
-s2 = ggscatter(gsva, x = 'ours', y = 'M.prophase', add = 'reg.line', conf.int = T,
+s2 = ggscatter(gsva, x = 'ColoTubIn', y = 'M.prophase', add = 'reg.line', conf.int = T,
                add.params = list(color = viridis(3)[1], fill = 'lightgray')) +
   stat_cor(method = 'pearson')
-s3 = ggscatter(gsva, x = 'ours', y = 'M.prometaphase', add = 'reg.line', conf.int = T,
+s3 = ggscatter(gsva, x = 'ColoTubIn', y = 'M.prometaphase', add = 'reg.line', conf.int = T,
                add.params = list(color = viridis(3)[1], fill = 'lightgray')) +
   stat_cor(method = 'pearson')
-s4 = ggscatter(gsva, x = 'ours', y = 'M.metaphase.anaphase', add = 'reg.line', conf.int = T,
+s4 = ggscatter(gsva, x = 'ColoTubIn', y = 'M.metaphase.anaphase', add = 'reg.line', conf.int = T,
                add.params = list(color = viridis(3)[1], fill = 'lightgray')) +
   stat_cor(method = 'pearson')
-s5 = ggscatter(gsva, x = 'ours', y = 'M.telophase.cytokinesis', add = 'reg.line', conf.int = T,
+s5 = ggscatter(gsva, x = 'ColoTubIn', y = 'M.telophase.cytokinesis', add = 'reg.line', conf.int = T,
                add.params = list(color = viridis(3)[1], fill = 'lightgray')) +
   stat_cor(method = 'pearson')
 

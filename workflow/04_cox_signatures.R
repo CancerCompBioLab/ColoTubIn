@@ -7,14 +7,14 @@ source(here("environment", "requirements.R"))
 
 
 # Inputpaths
-counts_train_inputpath <- here("data", "processed_data", "data", "data_partitions", "counts_train.rds")
-counts_test_inputpath <- here("data", "processed_data", "data", "data_partitions", "counts_test.rds")
-metadata_train_inputpath <- here("data", "processed_data", "data", "data_partitions", "metadata_train.rds")
-metadata_test_inputpath <- here("data", "processed_data", "data", "data_partitions", "metadata_test.rds")
-coad_signatures_inputpath <- here("data", "processed_data", "extdata", "signatures", "signatures_coad.rds")
+counts_train_inputpath <- here("data","data", "data_partitions", "counts_train.rds")
+counts_test_inputpath <- here("data", "data", "data_partitions", "counts_test.rds")
+metadata_train_inputpath <- here("data", "data", "data_partitions", "metadata_train.rds")
+metadata_test_inputpath <- here("data", "data", "data_partitions", "metadata_test.rds")
+coad_signatures_inputpath <- here("data", "extdata", "signatures", "signatures_coad.rds")
 
 # Outputpath
-outputdir <- here("data", "processed_data", "data", "cox", "tcga", "signatures")
+outputdir <- here("data","data", "cox", "tcga", "signatures")
 
 # Arguments
 surv_vars <- c("vital_status", "SurvTime")

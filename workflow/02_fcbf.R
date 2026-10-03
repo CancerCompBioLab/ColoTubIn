@@ -7,11 +7,13 @@ source(here("environment", "requirements.R"))
 #source("R/utils.R")
 
 # Inputpaths
-metadata_inputpath <- "data/data_partitions/metadata_train.rds"
-counts_inputpath <- "data/data_partitions/counts_train.rds"
+metadata_inputpath <- here("data","data", "data_partitions", "metadata_train.rds")
+counts_inputpath <-  here("data","data", "data_partitions", "counts_train.rds")
 
 # Outputpaths
-outputpath <- "data/yaccs/yaccs_annot.rds"
+outputpath <- here("data","data", "yaccs", "yaccs_annot.rds")
+
+
 
 # Arguments
 min_su <- 0.0025

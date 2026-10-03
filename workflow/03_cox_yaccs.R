@@ -6,14 +6,14 @@ here()
 source(here("environment", "requirements.R"))
 
 # Inputpaths
-counts_train_inputpath <- here("data", "data_partitions", "counts_train.rds")
-counts_test_inputpath <- here("data", "data_partitions", "counts_test.rds")
-metadata_train_inputpath <- here("data", "data_partitions", "metadata_train.rds")
-metadata_test_inputpath <- here("data", "data_partitions", "metadata_test.rds")
-yaccs_inputpath <- here("data", "yaccs", "yaccs_annot.rds")
+counts_train_inputpath <- here("data","data", "data_partitions", "counts_train.rds")
+counts_test_inputpath <- here("data","data", "data_partitions", "counts_test.rds")
+metadata_train_inputpath <- here("data","data", "data_partitions", "metadata_train.rds")
+metadata_test_inputpath <- here("data", "data","data_partitions", "metadata_test.rds")
+yaccs_inputpath <- here("data","data", "yaccs", "yaccs_annot.rds")
 
 # Outputpath
-outputdir <- here("data", "cox", "tcga")
+outputdir <- here("data","data", "cox", "tcga")
 
 # Arguments
 surv_vars <- c("vital_status", "SurvTime")

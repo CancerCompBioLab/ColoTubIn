@@ -7,8 +7,8 @@ here()
 source(here("environment", "requirements.R"))
 
 # Inputpath
-cox_inputpath <- here("data", "processed_data", "cox", "cox_cvrts_yaccs.rds")
-train_inputpath <- here("data", "processed_data", "cox", "train_all.rds")
+cox_inputpath <- here("data", "data", "cox","tcga-train" ,"cox_cvrts_yaccs.rds")
+train_inputpath <- here("data", "data", "cox","tcga-train","train_all.rds")
 
 # Arguments
 cpositions <- c(0.02, 0.22, 0.4)
