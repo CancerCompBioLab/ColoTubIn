@@ -1,7 +1,6 @@
 # Pathway enrichment
 # ----------
 
-setwd("/mnt/CCBdata/users/lea/Project_ColoTubIn/Github")
 library(here)
 here()
 source(here("environment", "requirements.R"))

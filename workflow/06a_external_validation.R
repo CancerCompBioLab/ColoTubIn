@@ -154,7 +154,6 @@ external_prediction <- function(signature, cohorts) {
     lp_cv  <- predict(cox_models[[cohort]]$cvrts, external_cohorts[[cohort]])
     lp_sig <- predict(cox_models[[cohort]]$signature, external_cohorts[[cohort]])
     
-    # Updated Helper with 'itr' and stability checks
     # Helper for Inf.Cval processing
     get_inf_stats <- function(time, status, score, tau, n_iter) {
       
