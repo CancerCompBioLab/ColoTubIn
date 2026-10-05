@@ -1,4 +1,8 @@
-# Scatter plot of C-Index in TCGA-COAD cohort Figure 2c)
+####################################
+# Figure 2c
+####################################
+
+# Scatter plot of C-Index in TCGA-COAD cohort 
 
 library(here)
 here()

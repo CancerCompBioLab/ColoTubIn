@@ -1,9 +1,11 @@
+####################################
+# Figure 2d-i
+####################################
+
 library(here)
 here()
 source(here("environment", "requirements.R"))
 
-
-# Figure 2 main script
 
 # Define central data and output directories using here
 sigcheck_dir <- here("data", "data", "sigcheck")
@@ -40,10 +42,9 @@ sigCheckPlot(literature, title = 'Literature signatures', nolegend = TRUE)
 dev.off()
 
 
-
-# Supplementary Material Figure 3
-
-# --- Updated loop to fit in page and save securely ---
+####################################
+# Figure Supplementary Figure 3
+####################################
 
 pdf(file.path(output_dir, "Signature_Plots_Suppl_Figure_3.pdf"), 
     width = 8.27, height = 11.69)

@@ -1,4 +1,7 @@
-# Uno Index with survC1 with pertubation
+####################################
+# Figure 3a 
+####################################
+
 # ========================================================
 # Forest Plot with Random-Effects Meta-Analysis
 # ========================================================
@@ -209,13 +212,6 @@ filtered_genes <- sig %>%
 G_list <- lapply(all_model_names, function(m) create_model_df(filtered_genes, m))
 names(G_list) <- all_model_names
 
-# --- 5. Formatting & Layout Settings --- # Already defined above
-# tabletext <- cbind(
-#   c("Study ID", "GSE17536","GSE17537","GSE29621","GSE39582",
-#     "TCGA_test","EMTAB12862","SPINAL", "Summary"),
-#   c("#Samples", "177","55","65","185", "33","782","106", NA),
-#   c("#Events", "67","20","23","44", "11","245","36", NA)
-# )
 tabletext_right <- cbind(rep("", nrow(tabletext)), rep("", nrow(tabletext)))
 w_equal <- rep(1, nrow(C_cov_list[[1]]))
 box_size_vector <- c(0.12, rep(0.2, 7), 0.12)
@@ -298,9 +294,10 @@ dev.off()
 ###########################################################################################################
 ###########################################################################################################
 
-############## MSI ########################
+####################################
+# Figure 3b
+####################################
 
-########### Uno Index ##############
 
 # --- 1. Load Data ---
 inputpath <- here("data", "data","cox","external", "uno_index_MSI_stratified_final_2026.rds")

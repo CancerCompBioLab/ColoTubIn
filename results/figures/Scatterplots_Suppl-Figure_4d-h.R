@@ -1,5 +1,8 @@
+####################################
+# Figure S4d-h
+####################################
+
 # Plot scatter plots between signature scores and specific cell cycles signatures
-# Figure 4d-h
 
 library(here)
 here()

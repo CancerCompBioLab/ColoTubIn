@@ -1,4 +1,8 @@
-# Code to reproduce Figure 2a
+####################################
+# Figure 2a
+####################################
+
+
 # Forest plot of Hazard ratio: multivariate model
 # --------------------------
 library(here)

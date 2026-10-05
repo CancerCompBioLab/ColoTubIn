@@ -1,4 +1,8 @@
-# Code to reproduce Figure 2b)
+####################################
+# Figure 2b
+####################################
+
+
 # Forest plot of Hazard ratio by feature: univariate model
 # --------------------------
 

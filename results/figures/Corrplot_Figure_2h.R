@@ -1,3 +1,6 @@
+####################################
+# Figure 2h
+####################################
 
 library(here)
 here()
@@ -15,7 +18,6 @@ counts <- readRDS(counts_inputpath) %>% t()
 # Arguments
 method <- "plage"
 
-############# Added
 # Convert ENSEMBL to SYMBOL
 genes <- AnnotationDbi::mapIds(
   org.Hs.eg.db,

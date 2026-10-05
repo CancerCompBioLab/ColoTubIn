@@ -1,9 +1,13 @@
+####################################
+# Figure 5f
+####################################
+
 library(here)
 here()
 source(here("environment", "requirements.R"))
 
 
-# Volcano plots figure 5f
+# Volcano plots 
 
 ## --- Configuration ---
 fgsea_inputpath <- here("data", "data", "repurposing","fgsea_by_signature_new.rds")
@@ -28,10 +32,10 @@ if (length(colotubin_idx) > 0) {
   fgseaRes <- fgseaRes[c(other_indices, colotubin_idx)]
 }
 
-## --- 2. Generate Plots ---
+## --- Generate Plots ---
 
 pp <- list()
-legend_grob <- NULL # We will store the extracted legend here
+legend_grob <- NULL 
 
 for (j in seq_along(fgseaRes)) {
   current_name <- names(fgseaRes)[j]
@@ -84,7 +88,6 @@ for (j in seq_along(fgseaRes)) {
       plot.title = element_text(hjust = 0.5, face = "bold"),
       axis.title = element_text(size = 12),
       axis.text = element_text(size = 10),
-      # Keep the legend temporarily so we can extract it
       legend.position = "right"
     ) +
     labs(
@@ -101,19 +104,16 @@ for (j in seq_along(fgseaRes)) {
     legend_grob <- ggpubr::get_legend(plot_j)
   }
   
-  # Now remove the legend from the plot before adding it to the list
   plot_j <- plot_j + theme(legend.position = "none")
   
   pp[[j]] <- plot_j
 }
 
-# --- NEW: Append the extracted legend as its own panel at the end ---
-# as_ggplot converts the legend grob into a plot object ggarrange can use
 pp[[length(pp) + 1]] <- ggpubr::as_ggplot(legend_grob)
 
-## --- 3. Final Arrangement and Output ---
+## --- Final Arrangement and Output ---
 
-num_plots <- length(pp) # This now includes the legend panel
+num_plots <- length(pp)
 NCOL <- 3 
 NROW <- ceiling(num_plots / 3)
 
@@ -126,7 +126,7 @@ plot_arranged <- ggpubr::ggarrange(
   plotlist = pp, 
   ncol = NCOL,   
   nrow = NROW,   
-  common.legend = FALSE # Kept false because the legend is treated as a normal plot panel now
+  common.legend = FALSE 
 )
 
 # Print and save
