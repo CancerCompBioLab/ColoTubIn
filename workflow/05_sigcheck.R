@@ -10,7 +10,10 @@ counts_test_inputpath <- here("data", "data", "data_partitions", "counts_test.rd
 metadata_train_inputpath <- here("data", "data", "data_partitions", "metadata_train.rds")
 metadata_test_inputpath <- here("data", "data", "data_partitions", "metadata_test.rds")
 
-signatures_inputpath <- here("data","extdata", "signatures", "signatures_coad.rds")
+#signatures_inputpath <- here("data","extdata", "signatures", "signatures_coad.rds")
+
+#Update
+signatures_inputpath <- here("data","extdata", "signatures", "sigcheck","literatureSignatures_new.rds")
 inputdir <- here("data", "extdata", "signatures", "sigcheck")
 
 # Outpaths

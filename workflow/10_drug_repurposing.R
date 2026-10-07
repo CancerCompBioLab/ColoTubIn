@@ -8,10 +8,10 @@ source(here("environment", "requirements.R"))
 # Inputpath
 ccle_inputpath <- here("data", "extdata", "repurposing", "sample_info.csv")
 prism_inputpath <- here("data", "extdata", "repurposing", "PRISM_19Q4_secondary-screen-dose-response-curve-parameters.csv")
-scores_inputpath <- here("data", "data", "repurposing", "signatures_scores.rds")
+scores_inputpath <- here("data", "data", "repurposing", "signatures_scores_new.rds")
 
 # Outputpath
-outputpath <- here("data", "data", "repurposing", "fgsea_by_signature.rds")
+outputpath <- here("data", "data", "repurposing", "fgsea_by_signature_new.rds")
 # Load data
 scores <- readRDS(scores_inputpath) %>% as.data.frame()
 
